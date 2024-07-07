@@ -2,32 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.tool-link {
+	@apply underline text-blue-500 hover:text-blue-400;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.tool-container {
+	display: flex;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.tool-input {
+	padding: 0.75rem 1rem;
+	border-top-left-radius: 0.75rem;
+	border-bottom-left-radius: 0.75rem; 
+	border-width: 2px; 
+	border-right-width: 0; 
+	width: 100%; 
+	line-height: 1.25rem;
+	outline-style: none; 
+	@apply border-gray-300 focus:border-gray-700;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.tool-btn {
+	@apply min-w-36 rounded-r-xl bg-gray-700 px-4 py-3 text-white hover:bg-gray-600 active:bg-gray-800;
+}
+
+.autohide {
+	animation: hideAnim 5s forwards;
+	opacity: 1;
+}
+@keyframes hideAnim {
+	0%   {opacity: 1;}
+	90%  {opacity: 1;}
+	100% {opacity: 0;}
 }
