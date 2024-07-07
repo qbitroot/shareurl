@@ -19,9 +19,9 @@ export default function RootLayout({
         <article className="m-auto mt-2 max-w-screen-sm">
           <h2 className="text-xl">Did you know?</h2>
           <p>
-            If you share short URLs instead of the long ones, you will send less
-            bytes over the Internet, which means wires &amp; WiFi routers across
-            the globe will heat less and therefore save the planet from the
+            If you share short URLs instead of long ones, you will send fewer
+            bytes over the Internet, which means wires & Wi-Fi routers across
+            the globe will heat less and therefore save the planet from
             overheating and performance slowdown.
           </p>
         </article>
