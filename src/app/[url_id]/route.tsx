@@ -2,7 +2,13 @@ import { redirect } from "next/navigation";
 import dbConnect from "@/lib/dbConnect";
 import ShortUrl from "@/models/ShortUrl";
 
-export default async function Goto({ params }: { params: { url_id: string } }) {
+type Context = {
+  params: {
+    url_id: string;
+  };
+};
+
+export async function GET(req: Request, { params }: Context) {
   let redirUrl = null;
   try {
     await dbConnect();
